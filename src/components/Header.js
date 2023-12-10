@@ -1,20 +1,21 @@
-import { Link, NavLink } from "react-router-dom"
-import "./Header.css"
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.jpeg"
+import "./Header.css";
+
 export const Header = () => {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src= {Logo} alt="Welcome" />
-        <spam>Shopping Cart</spam>
+        <img src={Logo} alt="Shopping Cart" />
+        <span>Shopping Cart</span>
       </Link>
       <nav className="navigation">
-        <NavLink to="/" className="link">Home</NavLink>
-        <NavLink to="/cart" className="Link">Cart</NavLink>
+        <NavLink to="/" className="link" end>Home</NavLink>
+        <NavLink to="/cart" className="link">Cart</NavLink>
       </nav>
-      <link>
-        <span to="cart" className="items">Cart: 2</span>
-      </link>
+      <Link to="/cart" className="items">
+        <span>Cart: 2</span>
+      </Link>
     </header>
   )
 }

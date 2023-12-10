@@ -6,8 +6,8 @@ export const Header = () => {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src={Logo} alt="Shopping Cart" />
-        <span>Shopping Cart</span>
+        <img src={Logo} alt="Bijan's Shop" />
+        <span>Bijan's Shop</span>
       </Link>
       <nav className="navigation">
         <NavLink to="/" className="link" end>Home</NavLink>

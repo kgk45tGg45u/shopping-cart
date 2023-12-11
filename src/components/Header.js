@@ -1,12 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.jpeg"
+import { useCart } from "../context/CartContext";
 import "./Header.css";
 
 export const Header = () => {
+  const { cartList } = useCart();
+
   return (
     <header>
       <Link to="/" className="logo">
-        <img src={Logo} alt="Bijan's Shop" />
+        <img src={Logo} alt="Shopmate Logo" />
         <span>Bijan's Shop</span>
       </Link>
       <nav className="navigation">
@@ -14,7 +17,7 @@ export const Header = () => {
         <NavLink to="/cart" className="link">Cart</NavLink>
       </nav>
       <Link to="/cart" className="items">
-        <span>Cart: 2</span>
+        <span>Cart: {cartList.length}</span>
       </Link>
     </header>
   )

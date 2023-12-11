@@ -18,6 +18,7 @@ header {
 .logo img{
   max-width: 40px;
   margin-right: 5px;
+  border-radius: 20%;
 }
 
 .navigation .link{
